@@ -83,7 +83,7 @@ namespace Module7Assignment
         // (a) Populate the Dictionary: allow user to add multiple keys/values interactively
         static void PopulateDictionary()
         {
-            Console.WriteLine("Populate dictionary. Enter entries in the form 'key:value1,value2' (or blank to stop).");
+            Console.WriteLine("Populate dictionary. Enter entries in the form 'key:value1,value2' (or blank to stop).);");
             while (true)
             {
                 Console.Write("Entry: ");
@@ -114,7 +114,7 @@ namespace Module7Assignment
                     dict[key] = new List<string>();
 
                 dict[key].AddRange(values);
-                Console.WriteLine($"Added/updated key '{key}' with {values.Count} value(s).");
+                Console.WriteLine($"Added/updated key '{key}' with {values.Count} value(s).);
             }
         }
 
@@ -185,9 +185,8 @@ namespace Module7Assignment
             }
 
             Console.Write("Enter values (comma-separated): ");
-            var values = Console.ReadLine()?
-                .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
-                .Select(s => s.Trim()).Where(s => s.Length > 0).ToList() ?? new List<string>();
+            var values = Console.ReadLine()?.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                            .Select(s => s.Trim()).Where(s => s.Length > 0).ToList() ?? new List<string>();
 
             if (values.Count == 0)
             {
@@ -196,7 +195,7 @@ namespace Module7Assignment
             }
 
             dict[key] = values;
-            Console.WriteLine($"Key '{key}' added with {values.Count} value(s).");
+            Console.WriteLine($"Key '{key}' added with {values.Count} value(s).);
         }
 
         // (e) Add a Value to an Existing Key
@@ -211,9 +210,8 @@ namespace Module7Assignment
             }
 
             Console.Write("Enter value(s) to append (comma-separated): ");
-            var values = Console.ReadLine()?
-                .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
-                .Select(s => s.Trim()).Where(s => s.Length > 0).ToList() ?? new List<string>();
+            var values = Console.ReadLine()?.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                            .Select(s => s.Trim()).Where(s => s.Length > 0).ToList() ?? new List<string>();
 
             if (values.Count == 0)
             {
@@ -222,7 +220,7 @@ namespace Module7Assignment
             }
 
             dict[key].AddRange(values);
-            Console.WriteLine($"Appended {values.Count} value(s) to key '{key}'.");
+            Console.WriteLine($"Appended {values.Count} value(s) to key '{key}'.);
         }
 
         // (f) Sort the Keys
