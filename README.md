@@ -1,18 +1,28 @@
-# Module 7 Dictionary Assignment
+# COP2360 — Module 7 Dictionary Assignment
 
-This console application implements the Module 7 dictionary assignment features:
+This branch adds a console program implementing the Module 7 dictionary assignment.
 
-## Features
-- Interactive switch menu to:
-  - Populate the dictionary
-  - Display using three enumeration methods
-  - Remove key
-  - Add new key and values
-  - Append values to existing key
-  - Sort keys
+How to build and run
+- Ensure you have .NET SDK 6.0+ installed.
+- From the repository root (where the .csproj lives), run:
+  - dotnet build
+  - dotnet run
 
-## Instructions to Run/Test
-1. Clone the repository.
-2. Open the solution in Visual Studio.
-3. Run the application.
-4. Follow the on-screen instructions.
+Program features
+- Interactive switch-driven menu with options:
+  1) Populate the dictionary (key:value1,value2)
+  2) Display dictionary contents (three enumeration methods)
+  3) Remove a key
+  4) Add a new key and values
+  5) Append values to an existing key
+  6) Sort keys and display
+  7) Show enumeration methods info
+  8) Exit
+
+Testing
+- A small xUnit test project is included. To run tests:
+  - dotnet test
+
+Notes
+- The program uses Dictionary<string, List<string>> so each key can hold multiple values.
+- Keys are compared case-insensitively (StringComparer.OrdinalIgnoreCase).
