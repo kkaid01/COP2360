@@ -1,8 +1,6 @@
 ```markdown
 # COP2360 — Module 7 Dictionary Assignment
 
-This branch adds a console program implementing the Module 7 dictionary assignment.
-
 How to build and run
 - Ensure you have .NET SDK 6.0+ installed.
 - From the repository root (where the .csproj lives), run:
